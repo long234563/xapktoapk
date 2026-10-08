@@ -12,10 +12,11 @@ permissions:
 
 jobs:
   build:
+    name: Build XAPK Installer
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source code
+      - name: Checkout Source
         uses: actions/checkout@v4
 
       - name: Setup Java 17
@@ -25,13 +26,13 @@ jobs:
           java-version: '17'
 
       - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
 
-      - name: Install Android SDK 35
+      - name: Install SDK 35
         run: |
           sdkmanager "platforms;android-35" "build-tools;35.0.0"
 
-      - name: Setup Gradle 8.9
+      - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.9'
@@ -42,7 +43,7 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: XAPK-Installer-APK
+          name: XAPK-Installer
           path: app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
           retention-days: 30
