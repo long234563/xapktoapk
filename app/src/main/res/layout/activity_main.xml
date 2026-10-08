@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    android:background="#F7F9FC">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="XAPK Installer"
+            android:textSize="28sp"
+            android:textColor="#152238"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Chọn gói .xapk để giải nén và cài APK/split APK. Nếu có OBB, ứng dụng sẽ thử sao chép khi Android cho phép."
+            android:textSize="15sp"
+            android:textColor="#465366" />
+
+        <Button
+            android:id="@+id/btnChooseXapk"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="28dp"
+            android:text="Chọn file XAPK"
+            android:textAllCaps="false"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtFile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Chưa chọn file"
+            android:textColor="#465366"
+            android:textSize="14sp" />
+
+        <ProgressBar
+            android:id="@+id/progressInstall"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="12dp"
+            android:layout_marginTop="24dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="0" />
+
+        <TextView
+            android:id="@+id/txtProgress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Sẵn sàng"
+            android:textColor="#152238"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Cài đặt cần bạn xác nhận trong hộp thoại hệ thống."
+            android:textColor="#65758B"
+            android:textSize="14sp" />
+    </LinearLayout>
+</ScrollView>
